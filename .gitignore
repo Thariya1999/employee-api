@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 node_modules/
 .env
 dist/
+=======
+node_modules/
+.env
+dist/
+>>>>>>> 1b660d780aa4b77e8ec813678f3b011304ec02a5
 *.log
