@@ -9,12 +9,13 @@ import settingRouter from './routes/setting.js'
 import dashboardRouter from './routes/dashboard.js'
 import connectToDatabase from './db/db.js'
 import dotenv from "dotenv";
+import API_BASE_URL from './config.js'
 dotenv.config();
 
 connectToDatabase()
 const app = express()
 app.use(cors({
-    origin: "https://employee-frontend-zeta.vercel.app",
+    origin: `${API_BASE_URL}`,
     credentials: true
 }))
 app.use(express.json())
