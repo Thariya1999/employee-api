@@ -9,13 +9,13 @@ import settingRouter from './routes/setting.js'
 import dashboardRouter from './routes/dashboard.js'
 import connectToDatabase from './db/db.js'
 import dotenv from "dotenv";
-import API_BASE_URL from './config.js'
+import API_BASE_URL2 from './config.js'
 dotenv.config();
 
 connectToDatabase()
 const app = express()
 app.use(cors({
-    origin: `${API_BASE_URL}`,
+    origin: `${API_BASE_URL2}`,
     credentials: true
 }))
 app.use(express.json())
