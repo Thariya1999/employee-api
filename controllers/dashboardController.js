@@ -9,7 +9,7 @@ const getSummary = async (req, res) => {
         const totalDepartments = await Department.countDocuments();
 
         const totalSalaries = await Employee.aggregate([
-            {$group: {_id: null, totalSalary: {$sum : "salary"}}}
+            {$group: {_id: null, totalSalary: {$sum : "$salary"}}}
         ])
 
         const employeeAppliedForLeave = await Leave.distinct('employeeId')
