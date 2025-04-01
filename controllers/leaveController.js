@@ -3,11 +3,11 @@ import Leave from "../models/Leave.js"
 
 const addLeave = async (req, res) => {
     try {
-        const { userId, leaveType, startDate, endRate, reason } = req.body
+        const { userId, leaveType, startDate, endDate, reason } = req.body
         const employee = await Employee.findOne({ userId })
 
         const newLeave = new Leave({
-            employeeId: employee._id, leaveType, startDate, endRate, reason
+            employeeId: employee._id, leaveType, startDate, endDate, reason
         })
 
         await newLeave.save()
