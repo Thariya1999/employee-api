@@ -8,7 +8,7 @@ services:
     restart: always
     volumes:
       - mongo_db:/data/db
-
+# services dekak tiyenawa e deka thama mong
   app:
     build: .
     ports:
@@ -17,6 +17,7 @@ services:
       PORT: 3000
       DB_URL: mongodb+srv://employee:employee123@employeecluster.x5e3r.mongodb.net/employeeDB?retryWrites=true&w=majority&appName=employeecluster
       SECRET: jwtSecretKeyAAA33333@@@#####8889999jjdd
+      API_BASE_URL2: http://13.61.148.160:5173
     depends_on:
       - mongo_db
 
