@@ -36,7 +36,7 @@ const getSummary = async (req, res) => {
             leaveSummary
         })
     } catch(error) {
-        return res.status(500).json({success: false, error: "dashboard summary error"})
+        return res.status(500).json({success: false, error: "dashboard summary ERRO"})
     }
 }
 
